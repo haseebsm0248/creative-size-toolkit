@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free, privacy-friendly image dimension and aspect ratio calculator for creators.">
+  <title>Creative Size Toolkit</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="math.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header><span class="eyebrow">FREE OPEN-SOURCE TOOL</span><h1>Creative Size Toolkit</h1><p>Choose a preset or calculate the perfect dimensions for your next design. Everything runs locally in your browser.</p></header>
+    <section class="panel" aria-labelledby="preset-title">
+      <h2 id="preset-title">Quick presets</h2>
+      <div class="presets" id="presets"></div>
+    </section>
+    <section class="panel" aria-labelledby="calculate-title">
+      <h2 id="calculate-title">Aspect ratio calculator</h2>
+      <div class="inputs"><label>Width (px)<input type="number" id="width" min="1" max="100000" step="1" value="1080" inputmode="numeric"></label><label>Height (px)<input type="number" id="height" min="1" max="100000" step="1" value="1350" inputmode="numeric"></label></div>
+      <p class="error" id="error" role="alert" aria-live="polite"></p>
+      <div class="result"><div><span class="small">Simplified aspect ratio</span><strong id="ratio">4:5</strong></div><div><span class="small">Orientation</span><strong id="orientation">Portrait</strong></div><div><span class="small">Total pixels</span><strong id="pixels">1,458,000</strong></div></div>
+      <div class="actions"><button id="swap" type="button">Swap dimensions</button><button id="copy" type="button" class="primary">Copy dimensions</button></div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel" aria-labelledby="preview-title"><h2 id="preview-title">Shape preview</h2><div class="preview-wrap"><div id="preview" class="preview" aria-label="Dimension preview"><span id="preview-label">1080 × 1350</span></div></div><p class="hint">Preview shows proportions, not actual pixel size. Platform requirements can change; verify before publishing.</p></section>
+    <footer>Made for creators · Open source under the MIT License · No account required</footer>
+  </main>
+</body>
+</html>
